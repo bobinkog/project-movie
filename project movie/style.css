@@ -1,0 +1,407 @@
+*{
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+#content{
+  padding: 30px;
+  display: flex;
+  flex-direction:column;
+  background-image: url(goju2.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#navbar{
+  padding:20px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar #nav-left{
+  margin-left: 20px ;
+}
+#navbar #nav-left a{
+  text-decoration: none;
+  color:blueviolet;
+  font-size: 30px;
+  font-weight:700;
+}
+
+#navbar #nav-center a{
+ margin-left:20px;
+ text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition:0.4s ;
+}
+#navbar #nav-center a:hover{
+  color: gold;
+}
+#nav-raigt{
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+#nav-raigt span{
+  margin-right: 12px;
+  cursor: pointer;
+  font: size 33px;
+  color:green;
+} 
+#nav-raigt select{
+  background:none;
+  color:#ff6200;
+  margin-right:12px;
+  font-size:18px;
+  transition:0.4s;
+
+}
+#nav-raigt select:hover{
+  color: rgb(95, 88, 3);
+}
+#nav-raigt button{
+  background:none;
+  border: none;
+  padding: 15px;
+  font: size 19px;
+  width:160px;
+  color: rgb(77, 4, 53);
+  border-radius: 35px;
+  border:solid #e5e216c2 3px;
+  transition:0.4s;
+}
+#nav-raigt button:hover{
+  background-color: rgb(215, 244, 0);
+  color:rgb(152, 7, 135);
+}
+#center{
+  padding: 250px 30px;
+  
+}
+#center h2{
+  color: gold;
+  font-size: 25px;
+  font-weight: 700;
+}
+#center h1{
+  font-size:33px;
+  color: azure;
+  font-weight: 600;
+}
+#div-p p {
+  background-color: white;
+  display: inline-block;
+  padding:7px 11px;
+  font-weight: 800;
+  font-size:8px;
+  cursor:pointer;
+}
+#center button{
+  background:none;
+  border: none;
+  padding: 14px;
+  font: size 19px;
+  width:130px;
+  color: whitesmoke;
+  border-radius: 35px;
+  border:solid #e5e216c2 3px;
+  font-weight: 700;
+  transition:0.4s;
+}
+#center button:hover{
+   background-color: gold;
+   color: #333;
+}
+#main-poster{
+  padding:70px;
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  background-image:url(img/pg/services_bg.jpg) ;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+#title{
+  width:100%;
+  height: 100%;
+  padding: 10px;
+  margin-left:130px ;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+
+}
+#title-left h2{
+  font-size:14px;
+  font-weight: 600;
+  color: gold;
+}
+#title-left h1{
+  font: size 40px;
+  color: azure;
+}
+#title-r a{
+  text-decoration: none;
+  color: aliceblue;
+  margin-left: 10px;
+  background-color: black;
+  padding:15px;
+  border-radius: 50px;
+  border: solid #333 2px;
+  transition:0.5s;
+}
+#title-r a:focus{
+  border: solide gold 2px;
+
+}
+#card{
+  margin-top:20px;
+  margin-left:30px;
+  position:relative;
+  overflow:hidden;
+  width: 300px;
+  height: 450px;
+  border-radius: 14px;
+}
+#poster{
+  position:relative;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+}
+#poster img{
+  position:absolute ;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  transition:0.5s;
+  border-radius: 12px;
+}
+#datalest{
+  position:absolute;
+  bottom: -100%;
+  left:0;
+  width: 100%;
+  height: auto;
+  padding: 1.5em 1.5em 2em;
+  backdrop-filter: blur(16px);
+  background-color:#0000 ;
+  transition: 0.5s;
+}
+#card:hover #datalest{
+  bottom: 0;
+}
+#datalest h3{
+  color: rgba(10, 190, 103, 0.795);
+  font-size: 26px;
+  font-weight: 800;
+
+}
+#datalest p{
+  color:aliceblue;
+
+}
+#div-star{
+  display:inline-block;
+
+}
+#div-star input{
+ display:none;
+}
+#div-star label{
+  float: right;
+  cursor:pointer;
+  color: azure;
+  transition:0.3s;
+}
+#div-star label::before{
+  content:'\2605';
+  font-size:30px;
+
+}
+#div-star input:checked ~ label,
+ #div-star label:hover ,
+ #div-star label:hover ~ label{
+   color: rgb(255, 77, 0);
+   transition:0.3s;
+ }
+ #datalest button{
+  display:flex ;
+  align-items:center;
+  background:none;
+  border: none;
+  padding: 14px;
+  font: size 19px;
+  width:130px;
+  color: whitesmoke;
+  border-radius: 35px;
+  border:solid #e5e216c2 3px;
+  font-weight: 700;
+  transition:0.4s;
+  cursor:pointer;
+ }
+ #datalest button:hover{
+  background-color: gold;
+   color: #333;
+ }
+ #live{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 110px;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/pg/live_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+
+}
+#live #live-left #p1{
+  color: #e5e216;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#live #live-left h1{
+  font-size: 35px;
+  color: #333;
+}
+#live #live-left #h1{
+  color: #333;
+  font-size: 25px;
+  font-weight: 800;
+}
+#live #live-left #p1{
+  color: #ff6200;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#live #live-left button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#e5e216;
+  border: none;
+  padding: 20px;
+  font: size 15px;
+  width:165px;
+  color: #333;
+  border-radius: 35px;
+  border:solid #333 3px;
+  font-weight: 700;
+  transition:0.4s;
+  cursor: pointer;
+}
+#live #live-left button :hover{
+  background : none;
+  border: #e7b203 solid 2px;
+
+}
+title2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+#title2 #div-h1-p p{
+  font-size: 12px;
+  color: #e7eb0a;
+  text-align: center;
+  color:aliceblue;
+}
+#title2 #div-h1-p h1{
+  font-size: 28px;
+  color: white;
+}
+#live #live-left button :hover{
+  background : none;
+  border: #e7b203 solid 2px;
+
+}
+title2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+#title2 #div-h1-p p{
+  font-size: 12px;
+  color: #e7eb0a;
+  text-align: center;
+  color:aliceblue;
+}
+#title2 #div-h1-p h1{
+  font-size: 28px;
+  color: white;
+}
+
+
+#info{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:60px;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/pg/footer_bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+#info #logo-div a{
+  text-decoration: none;
+  color: gold;
+  font-size:30px;
+  font-weight: 700;
+
+}
+#info #info-r a{
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 18px;
+  margin-right: 15px;
+  font-weight: 700;
+  transition: 0.5s;
+}
+#info #info-r a:hover{
+  color: gold;
+
+}
+#info #info-r input{
+  padding:12px;
+  border:none;
+  background-color:#000   ;
+  border-radius:40px ;
+  width: 200px;
+  border: solid #e5e216;
+  color: aliceblue;
+  font-size: 14px;
+}
+#part5{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:20px;
+  background-color: #9e099e;
+}
+#part5 h3{
+  color: aliceblue;
+
+}
+#part5 a{
+  text-decoration: none;
+  color: #e5e216;
+}
+

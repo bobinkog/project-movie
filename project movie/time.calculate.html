@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Made In Heaven - Show Time Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <script src="time_calculate.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: url(pucci.webp) no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      position: relative;
+    }
+
+    
+    .clock {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Clock_icon_white.svg') no-repeat center;
+      background-size: contain;
+      opacity: 0.15;
+      animation: floatClock 15s linear infinite;
+    }
+
+    @keyframes floatClock {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0.2;
+      }
+      100% {
+        transform: translateY(-300px) rotate(1440deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #fff;
+      border-radius: 15px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      margin: 100px auto;
+      box-shadow: 0 0 20px #fff;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input {
+      background: #ffffffaa;
+      color: #000;
+    }
+
+    button {
+      background: #ff0055;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    button:hover {
+      background: #e6004c;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+  
+    #flash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="clock" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="clock" style="left: 30%; animation-delay: 5s;"></div>
+  <div class="clock" style="left: 50%; animation-delay: 10s;"></div>
+  <div class="clock" style="left: 70%; animation-delay: 15s;"></div>
+  <div class="clock" style="left: 90%; animation-delay: 20s;"></div>
+
+  
+  <div id="flash"></div>
+
+
+  <div class="container">
+    <h2>🕰️ Made In Heaven</h2>
+    <p>Show Time Calculator</p>
+    <input type="number" id="episodes" placeholder="Total Episodes" />
+    <input type="number" id="duration" placeholder="Episode Duration (minutes)" />
+    <input type="number" id="episodesPerDay" placeholder="Episodes per Day" />
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  
+  <audio id="madeInHeavenSound" src="dio-time-stop-made-with-Voicemod.mp3"></audio>
+
+
+</body>
+</html>
